@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/init'
+require 'model/log'
+
+if ARGV.length != 3
+	$stderr.puts "Usage:"
+	$stderr.puts "   #{$0} <name> <base_url> <base64 public key>"
+	exit 1
+end
+
+Log.create(
+      :name => ARGV[0],
+      :base_url => ARGV[1], :public_key => ARGV[2].unpack("m")[0]
+)

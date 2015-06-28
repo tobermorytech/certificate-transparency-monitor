@@ -1,0 +1,47 @@
+hash_verified_first:
+  root_hash: !binary |-
+    xyzzy
+  signature: !binary |-
+    abcde
+  size: 2
+  timestamp: 2015-01-01 00:00:00
+  hash_correct: true
+  log: first
+
+not_verified_hash_correct_first:
+  root_hash: !binary |-
+    dohXp7kfPC3ioc7g29+MeB+YMRGUAdK2Y/80gdcVWwI=
+  signature: !binary |-
+    xyzzy
+  size: 2
+  timestamp: 2015-01-01 00:00:00
+  log: first
+
+not_verified_hash_fuxxed_first:
+  root_hash: !binary |-
+    abcde
+  signature: !binary |-
+    xyzzy
+  size: 2
+  timestamp: 2015-01-01 00:00:00
+  log: first
+
+small_first:
+  root_hash: !binary |-
+    V1r+QVg8/wVlg9FKKI20gw3pNLjgLX6f/fKGqF53fZU=
+  signature: !binary |-
+    BAMARzBFAiEAkE2XAE2DcOhSfhvz5Ydsw++jcdBgoNrhjx9FyMfuzzgCIHd6uhB
+    wnxLMKuh45nRtINtr+KM/ne80laGkc4ABiQ+b
+  size: 10
+  timestamp: 2015-01-01 00:00:00
+  log: first
+
+large_first:
+  root_hash: !binary |-
+    MXtVAnGHJTLjLmMgbBvlrAnSTsY1PIAvjyNeSBs971I=
+  signature: !binary |-
+    BAMARzBFAiEAqoU4k0RubYq/KWsVUj08hvqNRwTY17yvlJZdBQeSXjICID0KXvp
+    RfYu1W0wxLjQFtIOwoJsF8IaOyzoG35p2Gcps
+  size: 50
+  timestamp: 2015-02-01 00:00:00
+  log: first

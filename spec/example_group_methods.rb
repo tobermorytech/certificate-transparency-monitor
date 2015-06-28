@@ -1,0 +1,2 @@
+module ExampleGroupMethods
+end

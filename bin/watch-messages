@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'bunny'
+
+amqp = Bunny.new(ENV["AMQP_URL"])
+amqp.start
+
+ch = amqp.create_channel
+q = ch.queue("watch-messages", :exclusive => true)
+q.bind("ctmonitor.sth.fetched")
+q.bind("ctmonitor.log.need_entries")
+q.bind("ctmonitor.log_entries.fetched")
+q.bind("ctmonitor.log_entries.new_entry")
+q.bind("ctmonitor.certificate.new")
+
+q.subscribe(:block => true) do |di, p, pl|
+	puts "#{Time.now.strftime('%F %T.%N')} #{p.type}: #{pl}"
+end
