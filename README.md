@@ -1,6 +1,6 @@
 This is an implementation of a [Certificate
 Transparency](http://www.certificate-transparency.org/) monitor.  It intends
-to be compliant with [RFC6962](http://tool.ietf.org/html/rfc6962), and all
+to be compliant with [RFC6962](http://tools.ietf.org/html/rfc6962), and all
 subsequent published CT-related specifications.
 
 
