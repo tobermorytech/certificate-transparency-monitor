@@ -26,7 +26,7 @@ class STHFetcher < Brown::Agent
 
 				logger.debug { "Fetch completed; log #{log.name} has #{sth.size} entries as of #{sth.timestamp}" }
 			rescue StandardError => ex
-				logger.warn { "Failed to fetch STH for #{log.base_url}: #{ex.message} (#{ex.class})" }
+				logger.warn { "Failed to fetch STH for #{log.name}: #{ex.message} (#{ex.class})" }
 				logger.info { ex.backtrace.map { |l| "    #{l}" }.join("\n") }
 			end
 		end
