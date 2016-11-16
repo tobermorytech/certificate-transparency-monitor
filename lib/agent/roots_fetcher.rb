@@ -11,7 +11,7 @@ class RootsFetcher < Brown::Agent
 	               type: "certificate-v1"
 	every 86400 do
 		logger.debug { "Doing a round of root fetches" }
-		Log.each do |log|
+		Log.where(inactive: false).each do |log|
 			begin
 				log.fetch_roots.each do |new_root|
 					new_cert.publish(

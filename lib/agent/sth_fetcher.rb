@@ -12,7 +12,7 @@ class STHFetcher < Brown::Agent
 
 	every 60 do
 		logger.debug { "Doing a round of STH fetches" }
-		Log.each do |log|
+		Log.where(inactive: false).each do |log|
 			begin
 				sth = log.fetch_sth
 
