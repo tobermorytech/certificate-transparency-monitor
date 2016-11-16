@@ -13,7 +13,7 @@ class Log < Sequel::Model
 	one_to_many :tree_heads
 	one_to_one  :newest_tree_head,
 	            class_name: "TreeHead",
-	            order: Sequel.desc(:timestamp),
+	            order: Sequel.desc(:retrieved_at),
 	            limit: 1
 
 	one_to_many :entries, :class_name => "LogEntry"
